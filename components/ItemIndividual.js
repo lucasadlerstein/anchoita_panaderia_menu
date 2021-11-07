@@ -120,11 +120,11 @@ const ItemIndividual = ({producto, etapa, t, tamanosBool, tipoItem}) => {
                                 onClick={() => agregarAlCarrito(producto)}
                             >+</AgregarBtn> */}
                         {/* </ColumnaPrimera> */}
-                        <Col xs={7} className="pl-5">
+                        <Col xs={8} className="pl-5">
                             <Nombre>{(i18n.language === 'en' && producto.en_nombre) ? producto.en_nombre : producto.nombre } {(producto.anada ? producto.anada : null)}</Nombre>
                             { (producto.descripcion) ? <Descripcion>{producto.descripcion}</Descripcion> : null }
                         </Col>
-                        <Col xs={5} className="pl-0">
+                        <Col xs={4} className="pl-0">
                             <Precio>
                                 {
                                     !(producto.precio === 0 || producto.precio === '0' || producto.precio === '') ? `$${producto.precio}` : ''
