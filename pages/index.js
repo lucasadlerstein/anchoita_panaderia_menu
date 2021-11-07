@@ -69,7 +69,7 @@ const Inicio = ({t}) => {
 
   const clickEtapaInicial = selec => {
     // cambiarSeleccion('etapa', selec);
-    router.push(`/menu#${selec}`);
+    router.push(`/menu?categoria=${selec}`);
   }
 
   // const clickVinosInicial = selec => {

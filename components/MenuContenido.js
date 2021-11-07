@@ -35,7 +35,7 @@ const Categoria = styled.p`
     font-size: 2.2rem;
     font-weight: bold;
     border-bottom: 1px solid var(--colorAzul);
-    width: 90%;
+    width: 95%;
     text-align: center;
     padding-bottom: 2rem;
     margin: 3rem auto 2rem auto;
@@ -68,11 +68,12 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
 
         traerCategoriasCafe();
 
-        // const queryString = window.location.search;
-        // const urlParams = new URLSearchParams(queryString);
-        // const id = urlParams.get('id');    
-
-        // window.location.href = `#${tipo}`;
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const categoriaGet = urlParams.get('categoria');   
+        setTimeout(() => {
+            window.location.href = `#${categoriaGet}`;
+        }, 500); 
 
         // eslint-disable-next-line
     }, [])
