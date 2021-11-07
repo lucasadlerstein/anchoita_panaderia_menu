@@ -1,0 +1,29 @@
+{
+  "name": "menu-anchoita",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3060",
+    "build": "next build",
+    "start": "next start -p 3060",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.21",
+    "next": "10.0.3",
+    "next-i18next": "^7.0.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "reactstrap": "^8.7.1",
+    "sweetalert2": "^10.13.0",
+    "sweetalert2-react-content": "^3.2.2"
+  }
+}

@@ -1,0 +1,68 @@
+{
+    "SEO": {
+        "Titulo": "Anchoita Argentina | Menú Digital",
+        "Descripcion": "",
+        "Keywords": "menu, anchoita, comida, vinos, Anchoita Argentina, Juan Ramírez de Velasco 1520"
+    },
+    "Secciones": {
+        "Comidas": "Comidas",
+        "Vinos": "Vinos",
+        "Cocteleria": "Coctelería",
+        "Bebidas": "Bebidas",
+        "Lugares": {
+            "Mundo": "Del mundo",
+            "Argentina": "Argentina",
+            "Copa": "Por copa"
+        }
+    },
+    "Alternativos": {
+        "Buscar": "Buscar en el menú",
+        "CerrarWish": "Cerrar lista de deseos",
+        "VerWish": "Ver lista de deseos",
+        "CerrarBuscador": "Cerrar buscador",
+        "Volver": "Volver"
+    },
+    "CatPlatos": {
+        "Destacados": "Destacados",
+        "Mano": "Con la mano",
+        "Quesos": "Quesos",
+        "Crudas": "Crudas",
+        "Charcuteria": "Charcutería de elaboración propia",
+        "Vegetales": "Vegetales",
+        "RioMar": "De río y mar argentinos",
+        "Huevos": "Huevos",
+        "Chuletones": "Chuletones",
+        "Carnes": "Carnes",
+        "Pastas": "Pastas",
+        "Postres": "Postres",
+        "Helados": "Helados"
+    },
+    "CatVinos": {
+        "Espumoso": "Espumoso",
+        "Blanco": "Blanco",
+        "Naranjo": "Naranjo",
+        "Rosado": "Rosado",
+        "Tinto": "Tinto",
+        "Dulce": "Dulce",
+        "FortificadoSeco": "Fortificado seco",
+        "FortificadoDulce": "Fortificado dulce",
+        "OtrosTamanos": "Otros tamaños"
+    },
+    "CatCocteleria": {
+        "Cocteles": "Cócteles",
+        "Refrescos": "Refrescos",
+        "Cervezas": "Cervezas",
+        "Sidras": "Sidras",
+        "Destilados": "Destilados"
+    },
+    "CatBebidas": {
+        "Bebidas": "Bebidas"
+    },
+    "CatMenuPanaderia": {
+        "Cafeteria": "Cafés de especialidad",
+        "Bebidas": "Bebidas",
+        "Panaderia": "Panadería orgánica",
+        "Sandwiches": "Sandwiches",
+        "Helados": "Helados"
+    }
+}

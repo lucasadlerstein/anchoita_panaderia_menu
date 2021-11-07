@@ -1,0 +1,130 @@
+:root {
+  --colorAzul: #103149;
+  --colorNaranja: #FF4D00;
+  --fuentePrincipal: 'RobotoCondensed', sans-serif;
+  /* --fuentePrincipal: 'Henderson', sans-serif; */
+  --fuenteSecundaria: 'RobotoCondensed', serif;
+  /* --fuenteSecundaria: 'Henderson', serif; */
+}
+
+@font-face {
+  font-family: "Henderson";
+  src: url("/fonts/Henderson/Henderson-Sans-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Henderson";
+  src: url("/fonts/Henderson/Henderson-Sans-Regular-Italic.otf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Henderson";
+  src: url("/fonts/Henderson/Henderson-Sans-Bold.otf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/RobotoCondensed/RobotoCondensed-Regular.ttf");
+  unicode-range: U+0030-0039;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed';
+  font-style: bold;
+  font-weight: 600;
+  src: url("/fonts/RobotoCondensed/RobotoCondensed-Bold.ttf");
+  unicode-range: U+0030-0039;
+}
+
+
+html {
+  box-sizing: 	border-box;
+  font-size: 62.5%;
+  background-color: #0E3453;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--colorAzul);
+  max-width: 50rem;
+  color: white;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: var(--fuentePrincipal);
+  -webkit-box-shadow: -3px 5px 43px -19px rgba(151, 129, 129, 0.75);
+  -moz-box-shadow: -3px 5px 43px -19px rgba(0,0,0,0.75);
+  box-shadow: -3px 5px 43px -19px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 768px){
+  body {
+    margin: 1rem auto;
+    min-height: calc(100vh - 2rem);
+  }
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.py-5r {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.activo {
+  color: var(--colorNaranja)!important;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.mt-15r {
+  transition: all .5s ease;
+  margin-top: 15rem!important;
+}
+
+.mt-18r {
+  transition: all .5s ease;
+  margin-top: 18rem!important;
+}
+
+.shake-and-pop {
+	-webkit-animation: wobble-hor-bottom 0.6s both;
+	        animation: wobble-hor-bottom 0.6s both;
+}
+
+.sin-stock {
+  opacity: .25;
+}

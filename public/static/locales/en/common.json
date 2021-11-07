@@ -1,0 +1,68 @@
+{
+    "SEO": {
+        "Titulo": "Anchoita Argentina | Digital Menu",
+        "Descripcion": "",
+        "Keywords": "menu, anchoita, food, wine, Anchoita Argentina, Juan Ramírez de Velasco 1520"
+    },
+    "Secciones": {
+        "Comidas": "Food",
+        "Vinos": "Wine",
+        "Cocteleria": "Cocktails",
+        "Bebidas": "Drinks",
+        "Lugares": {
+            "Mundo": "Worldwide",
+            "Argentina": "Argentina",
+            "Copa": "By glass"
+        }
+    },
+    "Alternativos": {
+        "Buscar": "Search in the menu",
+        "CerrarWish": "Close wishlist",
+        "VerWish": "Open wishlist",
+        "CerrarBuscador": "Close search bar",
+        "Volver": "Back"
+    },
+    "CatPlatos": {
+        "Destacados": "Recommended",
+        "Mano": "With the hand",
+        "Quesos": "Cheese",
+        "Crudas": "Raws",
+        "Charcuteria": "Homemade delicatessen",
+        "Vegetales": "Vegetables",
+        "RioMar": "Argentine river and sea",
+        "Huevos": "Eggs",
+        "Chuletones": "Steaks",
+        "Carnes": "Meat",
+        "Pastas": "Pasta",
+        "Postres": "Desserts",
+        "Helados": "Ice Cream"
+    },
+    "CatVinos": {
+        "Espumoso": "Sparkling wine",
+        "Blanco": "White wine",
+        "Naranjo": "Orange wine",
+        "Rosado": "Rosé",
+        "Tinto": "Red wine",
+        "Dulce": "Late harvest",
+        "FortificadoSeco": "Fortified dry",
+        "FortificadoDulce": "Fortified sweet",
+        "OtrosTamanos": "Different sizes"
+    },
+    "CatCocteleria": {
+        "Cocteles": "Cocktails",
+        "Refrescos": "Refreshments",
+        "Cervezas": "Beers",
+        "Sidras": "Ciders",
+        "Destilados": "Distillates"
+    },
+    "CatBebidas": {
+        "Bebidas": "Drinks"
+    },
+    "CatMenuPanaderia": {
+        "Cafeteria": "Cafés de especialidad",
+        "Bebidas": "Bebidas",
+        "Panaderia": "Panadería orgánica",
+        "Sandwiches": "Sandwiches",
+        "Helados": "Helados"
+    }
+}
