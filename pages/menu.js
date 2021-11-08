@@ -93,7 +93,8 @@ const Menu = ({t}) => {
         position: sticky;
         top: 0;
         z-index: 998;
-        padding: 2rem 0;
+        padding: 1rem 0;
+        /* padding: 2rem 0; */
         min-height: 8rem;
     `;
 
@@ -177,7 +178,7 @@ const Menu = ({t}) => {
                     <Col xs={buscador ? 4 : 8} className={`text-center ${buscador ? 'px-0' : ''}`}>
                         <Link href="/">
                             <a>
-                                <img src="img/logo-menu.png" alt="Logo Anchoita" style={{maxHeight: '4rem'}} />
+                                <img src="img/logo-menu.png" alt="Logo Anchoita" style={{maxHeight: '7rem'}} />
                             </a>
                         </Link>
                     </Col>

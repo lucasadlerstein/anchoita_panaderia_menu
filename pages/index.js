@@ -7,8 +7,8 @@ import {i18n, withTranslation} from '../i18n';
 import PropTypes from 'prop-types'
 
 const Logo = styled.img`
-  max-width: 17rem;
-  margin: 0 auto 5.5rem auto;
+  max-width: 20rem;
+  margin: 0 auto 5rem auto;
   text-align: center;
 `;
 

@@ -69,10 +69,13 @@ const ColumnaPrimera = styled(Col)`
 
 const GustoHelado = styled.div`
     color: var(--colorAzul);
-    width: 45%;
-    padding-left: 3rem;
+    width: 50%;
+    /* padding-left: 3rem; */
+    margin: 0 auto;
+    text-align: center;
     margin-bottom: .5rem;
     display: inline-block;
+
 `;
 
 const ItemIndividual = ({producto, etapa, t, tamanosBool, tipoItem}) => {

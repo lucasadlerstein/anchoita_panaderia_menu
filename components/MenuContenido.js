@@ -58,7 +58,6 @@ const SubCategoria = styled.p`
 const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
     const router = useRouter();
 
-    console.log(categorias)
     useEffect(() => {
         async function traerCategoriasCafe() {
             await clienteAxios.get('/general/get/categorias-cafe')
@@ -73,15 +72,26 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
         const categoriaGet = urlParams.get('categoria');   
         setTimeout(() => {
             window.location.href = `#${categoriaGet}`;
-        }, 500); 
+        }, 600); 
+
+        // Organizar helados
+        if(contenido) {
+            let soloHelados = contenido.filter(it => Number(it.categoria) === 5);
+            let preciosHelados = soloHelados.filter(sH => (sH.precio !== 0 && sH.precio !== ''));
+            preciosHelados = preciosHelados.sort(function(a, b){return a.precio-b.precio});
+            let soloGustos = soloHelados.filter(sH => (sH.precio === 0 || sH.precio === ''));
+            setItemsHelados(preciosHelados.concat(soloGustos));
+            console.log(preciosHelados.concat(soloGustos))
+        }
 
         // eslint-disable-next-line
-    }, [])
+    }, [contenido])
 
     const SeleccionContext = useContext(seleccionContext);
     const {cambiarSeleccion} = SeleccionContext;
 
     const [categoriasCafe, setCategoriasCafe] = useState([]);
+    const [itemsHelados, setItemsHelados] = useState([]);
 
     const cuentaDiez = [1,2,3,4,5,6,7,8,9,10];
 
@@ -132,7 +142,7 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
                             ))
                         }
 
-                        {
+                        {/* {
                             contenido.map(prod => (
                                 (prod.categoria === item.id && prod.visible === true && Number(prod.categoria) !== 1) ? (
                                     <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />
@@ -140,6 +150,26 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
                                     <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />                                    
                                 ) : null
                             ))
+                        } */}
+                        {
+                            (item.id === 5) ? (
+                                itemsHelados.map(prod => (
+                                    (prod.categoria === item.id && prod.visible === true && Number(prod.categoria) !== 1) ? (
+                                        <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />
+                                    ) : (prod.destacado === true && prod.visible === true && item.codigo === 'destacado' && Number(prod.categoria) !== 1) ? (
+                                        <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />                                    
+                                    ) : null
+                                ))
+                            ) : (
+                                contenido.map(prod => (
+                                    (prod.categoria === item.id && prod.visible === true && Number(prod.categoria) !== 1) ? (
+                                        <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />
+                                    ) : (prod.destacado === true && prod.visible === true && item.codigo === 'destacado' && Number(prod.categoria) !== 1) ? (
+                                        <ItemIndividual key={prod.id} producto={prod} etapa={etapa} tipoItem={(Number(prod.categoria) === 5 && (Number(prod.precio) === 0 || prod.precio === '')) ? 'gusto' : ''} />                                    
+                                    ) : null
+                                ))
+
+                            )
                         }
                     </div>       
                 ))
