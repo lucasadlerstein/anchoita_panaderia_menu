@@ -38,7 +38,7 @@ const Categoria = styled.p`
     width: 95%;
     text-align: center;
     padding-bottom: 2rem;
-    margin: 3rem auto 2rem auto;
+    margin: 7rem auto 2rem auto;
     /* margin-top: 3rem; */
     /* margin-bottom: .5rem; */
     transition: all .5s ease;
@@ -52,7 +52,7 @@ const SubCategoria = styled.p`
     font-weight: bold;
     font-size: 2rem;
     color: var(--colorAzul);
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 `;
 
 const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
@@ -131,7 +131,7 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
                             cuentaDiez.map(one => (
                                 (categoriasCafe[[one-1]] !== undefined && categoriasCafe[[one-1]].nombre !== '' && item.codigo === 'cafeteria') ? (
                                     <>
-                                        <SubCategoria className="pl-4">_ {categoriasCafe[[one-1]].nombre}</SubCategoria>
+                                        <SubCategoria className={`pl-4 ${one === 1 ? 'mt-5' : ''}`}>_ {categoriasCafe[[one-1]].nombre}</SubCategoria>
                                         {contenido.map(prod => (
                                             (Number(prod.categoria) === 1 && prod.visible === true && Number(prod.categoria2) === one) ? (
                                                 <ItemIndividual key={prod.id} producto={prod} etapa={etapa} />
