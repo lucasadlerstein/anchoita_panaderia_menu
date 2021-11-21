@@ -14,11 +14,12 @@ const Fondo = styled.div`
 const VolverBtn = styled.button`
     color: var(--colorAzul);
     position: absolute;
-    top: 5px;
+    top: 15px;
     left: 5px;
     border: none;
     font-size: 1.2rem;
     font-weight: bold;
+    /* z-index:999; */
     padding: .1rem 1rem;
     background-color: #cacaca;  
     transition: all .3s ease;
@@ -38,7 +39,7 @@ const Categoria = styled.p`
     width: 95%;
     text-align: center;
     padding-bottom: 2rem;
-    margin: 7rem auto 2rem auto;
+    margin: 6rem auto 2rem auto;
     /* margin-top: 3rem; */
     /* margin-bottom: .5rem; */
     transition: all .5s ease;

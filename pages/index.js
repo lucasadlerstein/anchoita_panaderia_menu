@@ -7,9 +7,16 @@ import {i18n, withTranslation} from '../i18n';
 import PropTypes from 'prop-types'
 
 const Logo = styled.img`
-  max-width: 20rem;
+  max-width: 30rem;
   margin: 0 auto 5rem auto;
   text-align: center;
+  background-color: white!important;
+  padding: 3rem 5rem;
+  border-radius: 1.5rem;
+  transition: all 3s ease;
+  &:hover {
+    border-radius: 10rem;
+  }
 `;
 
 const Lista = styled.ul`

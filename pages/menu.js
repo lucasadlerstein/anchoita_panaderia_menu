@@ -79,8 +79,8 @@ const Menu = ({t}) => {
 
     const BuscadorInput = styled.input`
         border: none;
-        border-bottom: 1px solid white;
-        color: white;
+        border-bottom: 1px solid var(--colorAzul);
+        color: var(--colorAzul);
         background-color: transparent;
         width: calc(98% - 1.2rem);
         &:focus {
@@ -89,13 +89,20 @@ const Menu = ({t}) => {
     `;
 
     const RowPersonalizada = styled(Row)`
-        background-color: var(--colorAzul);
+        /* background-color: var(--colorAzul); */
+        background-color: white;
         position: sticky;
         top: 0;
         z-index: 998;
         padding: 1rem 0;
         /* padding: 2rem 0; */
         min-height: 8rem;
+        margin: 0;
+        /* border-bottom: 1px solid var(--colorAzul); */
+        -webkit-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+
     `;
 
     const Notificacion = styled.span`
@@ -158,7 +165,7 @@ const Menu = ({t}) => {
                     crossOrigin=""
                 />
             </Head>
-            <Container className="py-5r">
+            <Container className="py-5r" style={{paddingTop: '10rem'}}>
                 <RowPersonalizada>
                     <Col xs={buscador ? 7 : 2} className={`my-auto ${buscador ? 'text-center' : 'text-right'}`}>
                         { buscador ? (
@@ -166,12 +173,20 @@ const Menu = ({t}) => {
                         ) : null }
                         {
                             buscador ? (
-                                <a onClick={() => {
-                                    setBuscador(!buscador)
-                                    cambiarBusqueda('')
+                                <a
+                                    style={{color: 'var(--colorAzul)'}}
+                                    onClick={() => {
+                                        setBuscador(!buscador)
+                                        cambiarBusqueda('')
                                 }}>X</a>
                             ) : (
-                                <a onClick={() => setBuscador(!buscador)} ><img src="img/search-icon.png" alt={t('Alternativos.Buscar')} style={{width: '2rem'}} /></a>
+                                <a onClick={() => setBuscador(!buscador)}>
+                                    {/* <img src="img/search-icon.png" alt={t('Alternativos.Buscar')} style={{width: '2rem'}} /> */}
+                                    <svg fill="none" height="24" stroke="#103149" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10.5" cy="10.5" r="7.5"/>
+                                        <line x1="21" x2="15.8" y1="21" y2="15.8"/>
+                                    </svg>
+                                </a>
                             )
                         }
                     </Col>
