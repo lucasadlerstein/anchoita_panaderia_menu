@@ -39,13 +39,18 @@ const Categoria = styled.p`
     width: 95%;
     text-align: center;
     padding-bottom: 2rem;
-    margin: 6rem auto 2rem auto;
+    margin: 0 auto 2rem auto;
+    /* padding-top: 6rem; */
     /* margin-top: 3rem; */
     /* margin-bottom: .5rem; */
     transition: all .5s ease;
     &:hover {
         color: var(--colorNaranja);
     }
+`;
+
+const Espacio = styled.div`
+    padding: 3rem 0;
 `;
 
 const SubCategoria = styled.p`
@@ -71,9 +76,20 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const categoriaGet = urlParams.get('categoria');   
-        setTimeout(() => {
-            window.location.href = `#${categoriaGet}`;
-        }, 600); 
+        if(contenido && !enviado) {
+            setTimeout(() => {
+                // window.location.href = `#${categoriaGet}`;
+                const el = document.querySelector(`#${categoriaGet}`)
+                // const elPos = document.querySelector(`#${categoriaGet}`).getBoundingClientRect().top;
+                // window.scrollTo(0, elPos);
+                // console.log('elpos ', elPos)
+                el.scrollIntoView();
+                el.scrollBy(0, 20);
+                setEnviado(true);
+
+                // document.querySelector(`#${categoriaGet}`).getBoundingClientRect().y;
+            }, 900); 
+        }
 
         // Organizar helados
         if(contenido) {
@@ -93,6 +109,7 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
 
     const [categoriasCafe, setCategoriasCafe] = useState([]);
     const [itemsHelados, setItemsHelados] = useState([]);
+    const [enviado, setEnviado] = useState(false);
 
     const cuentaDiez = [1,2,3,4,5,6,7,8,9,10];
 
@@ -120,7 +137,8 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
             {
                 categorias.map((item, i) => (
                     <div key={item.codigo}>
-                        <Categoria id={item.codigo}>{item.nombre}</Categoria>
+                        <Espacio id={item.codigo}></Espacio>
+                        <Categoria >{item.nombre}</Categoria>
                         {/* {
                             categoriasCafe.map(cat => (
                                 (item.codigo === 'cafeteria' && cat.nombre !== '') ? (
