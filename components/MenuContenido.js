@@ -84,7 +84,7 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
                 // window.scrollTo(0, elPos);
                 // console.log('elpos ', elPos)
                 el.scrollIntoView();
-                el.scrollBy(0, 20);
+                el.scrollBy(0, 30);
                 setEnviado(true);
 
                 // document.querySelector(`#${categoriaGet}`).getBoundingClientRect().y;
