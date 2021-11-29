@@ -50,7 +50,7 @@ const Categoria = styled.p`
 `;
 
 const Espacio = styled.div`
-    padding: 3rem 0;
+    padding: 5rem 0;
 `;
 
 const SubCategoria = styled.p`
@@ -79,16 +79,25 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
         if(contenido && !enviado) {
             setTimeout(() => {
                 // window.location.href = `#${categoriaGet}`;
-                const el = document.querySelector(`#${categoriaGet}`)
                 // const elPos = document.querySelector(`#${categoriaGet}`).getBoundingClientRect().top;
                 // window.scrollTo(0, elPos);
                 // console.log('elpos ', elPos)
-                el.scrollIntoView();
-                el.scrollBy(0, 30);
+                // el.scrollBy(0, 150);
+                // window.scrollBy(0,100)
+
+
+                // const el = document.querySelector(`#${categoriaGet}`)
+                // el.scrollIntoView();
+
+                window.location.href = `#${categoriaGet}`;
+
+
+
                 setEnviado(true);
 
+
                 // document.querySelector(`#${categoriaGet}`).getBoundingClientRect().y;
-            }, 900); 
+            }, 1000); 
         }
 
         // Organizar helados
@@ -137,7 +146,8 @@ const MenuContenido = ({contenido, tipo, categorias, etapa, t}) => {
             {
                 categorias.map((item, i) => (
                     <div key={item.codigo}>
-                        <Espacio id={item.codigo}></Espacio>
+                        <div id={item.codigo}></div>
+                         <Espacio></Espacio>
                         <Categoria >{item.nombre}</Categoria>
                         {/* {
                             categoriasCafe.map(cat => (
