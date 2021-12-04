@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import styled from '@emotion/styled';
+import router from 'next/router';
+import {withTranslation} from '../i18n';
 
 const Boton = styled.button`
     position: fixed;
@@ -15,7 +17,28 @@ const Boton = styled.button`
     }
 `;
 
-const ScrollTop = () => {
+const VolverBtn = styled.button`
+    color: var(--colorAzul);
+    position: fixed;
+    left: 2rem;
+    bottom: 2.5rem;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    z-index: 999;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    background-color: #cacaca;  
+    transition: all .3s ease;
+    &:hover {
+        background-color: #f0f0f0;
+    }
+    &:focus {
+        outline: none;
+    }
+`;
+
+const ScrollTop = ({t}) => {
     const [mostrarScroll, setMostrarScroll] = useState(false)
     
     function chequearScroll() {
@@ -40,11 +63,16 @@ const ScrollTop = () => {
         <>
             {
                 mostrarScroll ? (
-                    <Boton
-                        onClick={() => scrollTop()}
-                    >
-                        <img src="/img/subir-icono.png" alt="Scroll hacia arriba" />
-                    </Boton>
+                    <>
+                        <VolverBtn
+                            onClick={() => router.push(`/`)}
+                        >{t('Alternativos.Volver')}</VolverBtn>
+                        <Boton
+                            onClick={() => scrollTop()}
+                        >
+                            <img src="/img/subir-icono.png" alt="Scroll hacia arriba" />
+                        </Boton>
+                    </>
                 ) : null
             }
         </>
@@ -52,4 +80,5 @@ const ScrollTop = () => {
     );
 }
  
-export default ScrollTop;
+// export default ScrollTop;
+export default withTranslation('common')(ScrollTop);

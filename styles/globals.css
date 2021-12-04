@@ -66,7 +66,7 @@ body {
   -webkit-box-shadow: -3px 5px 43px -19px rgba(151, 129, 129, 0.75);
   -moz-box-shadow: -3px 5px 43px -19px rgba(0,0,0,0.75);
   box-shadow: -3px 5px 43px -19px rgba(0,0,0,0.75);
-  margin-top: 20rem!important;
+  /* margin-top: 20rem!important; */
 }
 
 @media (min-width: 768px){
