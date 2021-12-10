@@ -20,8 +20,10 @@ const VolverBtn = styled.button`
     font-size: 1.2rem;
     font-weight: bold;
     /* z-index:999; */
-    padding: .1rem 1rem;
-    background-color: #cacaca;  
+    background-color: #cacaca; 
+    border-radius: 3rem;
+    padding: .2rem 1.5rem;
+    /* padding: 1rem 2rem;  */
     transition: all .3s ease;
     &:hover {
         background-color: #f0f0f0;
